@@ -25,7 +25,7 @@ public class TMDbService
         var movieWanted = preciseAccessibleSearchResult?.results[0];
 
 
-
+        Console.WriteLine(movieWanted);
         if (firstMovieResult != null)
         {
             var movie = new Movie
@@ -33,6 +33,7 @@ public class TMDbService
                 Title = firstMovieResult.Title,
                 Description = firstMovieResult.Overview,
                 Year = movieWanted?.release_date,
+                Image = $"https://image.tmdb.org/t/p/w500{movieWanted?.poster_path}"
             };
 
             // Récupérer les crédits pour obtenir le réalisateur, si nécessaire

@@ -15,10 +15,20 @@ builder.Services.AddHttpClient<TMDbService>(client =>
 {
     client.BaseAddress = new Uri("https://api.themoviedb.org/3/");
 });
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+        builder.WithOrigins("http://localhost:3000") // Remplacez par l'URL de votre application frontend
+               .AllowAnyMethod()
+               .AllowAnyHeader());
+});
 var env = builder.Environment;
 var app = builder.Build();
 app.UseStaticFiles();
 app.UseSpaStaticFiles();
+
+
+app.UseCors();
 
 // Utilisez l'injection de dépendances pour obtenir une instance de MovieShop
 var movieShop = app.Services.GetRequiredService<MovieShop>();
