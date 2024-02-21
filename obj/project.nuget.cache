@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "UkX53b/bgsp2K+zwKGupVxbd5BM4he6BszWe657y1T1wRpqFGPNZzq9H8GK3sKfPpRVfiE/7WK9sBOqPBAxX7g==",
+  "success": true,
+  "projectFilePath": "/Users/n.dreyfus-laquieze/Library/CloudStorage/OneDrive-ONEPOINT/Documents/MoviesApiProject/MoviesAPI/MoviesAPI.csproj",
+  "expectedPackageFiles": [
+    "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.entityframeworkcore/9.0.0-preview.1.24081.2/microsoft.entityframeworkcore.9.0.0-preview.1.24081.2.nupkg.sha512",
+    "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.entityframeworkcore.abstractions/9.0.0-preview.1.24081.2/microsoft.entityframeworkcore.abstractions.9.0.0-preview.1.24081.2.nupkg.sha512",
+    "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.entityframeworkcore.analyzers/9.0.0-preview.1.24081.2/microsoft.entityframeworkcore.analyzers.9.0.0-preview.1.24081.2.nupkg.sha512",
+    "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.entityframeworkcore.inmemory/9.0.0-preview.1.24081.2/microsoft.entityframeworkcore.inmemory.9.0.0-preview.1.24081.2.nupkg.sha512",
+    "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.extensions.caching.abstractions/9.0.0-preview.1.24080.9/microsoft.extensions.caching.abstractions.9.0.0-preview.1.24080.9.nupkg.sha512",
+    "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.extensions.caching.memory/9.0.0-preview.1.24080.9/microsoft.extensions.caching.memory.9.0.0-preview.1.24080.9.nupkg.sha512",
+    "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.0-preview.1.24080.9/microsoft.extensions.dependencyinjection.9.0.0-preview.1.24080.9.nupkg.sha512",
+    "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.0-preview.1.24080.9/microsoft.extensions.dependencyinjection.abstractions.9.0.0-preview.1.24080.9.nupkg.sha512",
+    "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.extensions.logging/9.0.0-preview.1.24080.9/microsoft.extensions.logging.9.0.0-preview.1.24080.9.nupkg.sha512",
+    "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.extensions.logging.abstractions/9.0.0-preview.1.24080.9/microsoft.extensions.logging.abstractions.9.0.0-preview.1.24080.9.nupkg.sha512",
+    "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.extensions.options/9.0.0-preview.1.24080.9/microsoft.extensions.options.9.0.0-preview.1.24080.9.nupkg.sha512",
+    "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.extensions.primitives/9.0.0-preview.1.24080.9/microsoft.extensions.primitives.9.0.0-preview.1.24080.9.nupkg.sha512",
+    "/Users/n.dreyfus-laquieze/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
