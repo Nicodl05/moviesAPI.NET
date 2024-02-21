@@ -2,13 +2,10 @@
 using MoviesAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.SpaServices.Extensions;
+
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddSpaStaticFiles(configuration =>
-{
-    configuration.RootPath = "frontend/build";
-});
+
 // Ajoutez vos services ici
 builder.Services.AddSingleton<MovieShop>();
 builder.Services.AddHttpClient<TMDbService>(client =>
@@ -25,7 +22,7 @@ builder.Services.AddCors(options =>
 var env = builder.Environment;
 var app = builder.Build();
 app.UseStaticFiles();
-app.UseSpaStaticFiles();
+
 
 
 app.UseCors();

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/n.dreyfus-laquieze/Library/CloudStorage/OneDrive-ONEPOINT/Documents/MoviesApiProject/MoviesAPI/MoviesAPI.csproj": {}
+    "/Users/n.dreyfus-laquieze/Library/CloudStorage/OneDrive-ONEPOINT/Documents/MoviesApiProject/MoviesAPI/backend/MoviesAPI.csproj": {}
   },
   "projects": {
-    "/Users/n.dreyfus-laquieze/Library/CloudStorage/OneDrive-ONEPOINT/Documents/MoviesApiProject/MoviesAPI/MoviesAPI.csproj": {
+    "/Users/n.dreyfus-laquieze/Library/CloudStorage/OneDrive-ONEPOINT/Documents/MoviesApiProject/MoviesAPI/backend/MoviesAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/n.dreyfus-laquieze/Library/CloudStorage/OneDrive-ONEPOINT/Documents/MoviesApiProject/MoviesAPI/MoviesAPI.csproj",
+        "projectUniqueName": "/Users/n.dreyfus-laquieze/Library/CloudStorage/OneDrive-ONEPOINT/Documents/MoviesApiProject/MoviesAPI/backend/MoviesAPI.csproj",
         "projectName": "MoviesAPI",
-        "projectPath": "/Users/n.dreyfus-laquieze/Library/CloudStorage/OneDrive-ONEPOINT/Documents/MoviesApiProject/MoviesAPI/MoviesAPI.csproj",
+        "projectPath": "/Users/n.dreyfus-laquieze/Library/CloudStorage/OneDrive-ONEPOINT/Documents/MoviesApiProject/MoviesAPI/backend/MoviesAPI.csproj",
         "packagesPath": "/Users/n.dreyfus-laquieze/.nuget/packages/",
-        "outputPath": "/Users/n.dreyfus-laquieze/Library/CloudStorage/OneDrive-ONEPOINT/Documents/MoviesApiProject/MoviesAPI/obj/",
+        "outputPath": "/Users/n.dreyfus-laquieze/Library/CloudStorage/OneDrive-ONEPOINT/Documents/MoviesApiProject/MoviesAPI/backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/n.dreyfus-laquieze/.nuget/NuGet/NuGet.Config"
