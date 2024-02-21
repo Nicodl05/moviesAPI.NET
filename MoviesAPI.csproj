@@ -9,6 +9,8 @@
 
     <ItemGroup>
 
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="8.0.2" />
+
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0-preview.1.24081.2" />
 
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />

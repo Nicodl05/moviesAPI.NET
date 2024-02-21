@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "UkX53b/bgsp2K+zwKGupVxbd5BM4he6BszWe657y1T1wRpqFGPNZzq9H8GK3sKfPpRVfiE/7WK9sBOqPBAxX7g==",
+  "dgSpecHash": "JTbQraZhi3cl0YNZqpCYtJqYn91yFQPGoxGaJVpnC5AOx3h0pEBuM1l584HANEUWCchy9CTKL2XW8z2obIvXgw==",
   "success": true,
   "projectFilePath": "/Users/n.dreyfus-laquieze/Library/CloudStorage/OneDrive-ONEPOINT/Documents/MoviesApiProject/MoviesAPI/MoviesAPI.csproj",
   "expectedPackageFiles": [
+    "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.aspnetcore.spaservices.extensions/8.0.2/microsoft.aspnetcore.spaservices.extensions.8.0.2.nupkg.sha512",
     "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.entityframeworkcore/9.0.0-preview.1.24081.2/microsoft.entityframeworkcore.9.0.0-preview.1.24081.2.nupkg.sha512",
     "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.entityframeworkcore.abstractions/9.0.0-preview.1.24081.2/microsoft.entityframeworkcore.abstractions.9.0.0-preview.1.24081.2.nupkg.sha512",
     "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.entityframeworkcore.analyzers/9.0.0-preview.1.24081.2/microsoft.entityframeworkcore.analyzers.9.0.0-preview.1.24081.2.nupkg.sha512",
@@ -12,6 +13,9 @@
     "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.extensions.caching.memory/9.0.0-preview.1.24080.9/microsoft.extensions.caching.memory.9.0.0-preview.1.24080.9.nupkg.sha512",
     "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.0-preview.1.24080.9/microsoft.extensions.dependencyinjection.9.0.0-preview.1.24080.9.nupkg.sha512",
     "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.0-preview.1.24080.9/microsoft.extensions.dependencyinjection.abstractions.9.0.0-preview.1.24080.9.nupkg.sha512",
+    "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.extensions.fileproviders.abstractions/8.0.0/microsoft.extensions.fileproviders.abstractions.8.0.0.nupkg.sha512",
+    "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.extensions.fileproviders.physical/8.0.0/microsoft.extensions.fileproviders.physical.8.0.0.nupkg.sha512",
+    "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.extensions.filesystemglobbing/8.0.0/microsoft.extensions.filesystemglobbing.8.0.0.nupkg.sha512",
     "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.extensions.logging/9.0.0-preview.1.24080.9/microsoft.extensions.logging.9.0.0-preview.1.24080.9.nupkg.sha512",
     "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.extensions.logging.abstractions/9.0.0-preview.1.24080.9/microsoft.extensions.logging.abstractions.9.0.0-preview.1.24080.9.nupkg.sha512",
     "/Users/n.dreyfus-laquieze/.nuget/packages/microsoft.extensions.options/9.0.0-preview.1.24080.9/microsoft.extensions.options.9.0.0-preview.1.24080.9.nupkg.sha512",

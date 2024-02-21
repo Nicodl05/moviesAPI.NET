@@ -37,3 +37,8 @@
 /Users/n.dreyfus-laquieze/Library/CloudStorage/OneDrive-ONEPOINT/Documents/MoviesApiProject/MoviesAPI/obj/Debug/net8.0/MoviesAPI.csproj.AssemblyReference.cache
 /Users/n.dreyfus-laquieze/Library/CloudStorage/OneDrive-ONEPOINT/Documents/MoviesApiProject/MoviesAPI/obj/Debug/net8.0/MoviesAPI.csproj.Up2Date
 /Users/n.dreyfus-laquieze/Library/CloudStorage/OneDrive-ONEPOINT/Documents/MoviesApiProject/MoviesAPI/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/n.dreyfus-laquieze/Library/CloudStorage/OneDrive-ONEPOINT/Documents/MoviesApiProject/MoviesAPI/bin/Debug/net8.0/frontend/package-lock.json
+/Users/n.dreyfus-laquieze/Library/CloudStorage/OneDrive-ONEPOINT/Documents/MoviesApiProject/MoviesAPI/bin/Debug/net8.0/frontend/package.json
+/Users/n.dreyfus-laquieze/Library/CloudStorage/OneDrive-ONEPOINT/Documents/MoviesApiProject/MoviesAPI/bin/Debug/net8.0/frontend/public/manifest.json
+/Users/n.dreyfus-laquieze/Library/CloudStorage/OneDrive-ONEPOINT/Documents/MoviesApiProject/MoviesAPI/bin/Debug/net8.0/Microsoft.AspNetCore.SpaServices.Extensions.dll
+/Users/n.dreyfus-laquieze/Library/CloudStorage/OneDrive-ONEPOINT/Documents/MoviesApiProject/MoviesAPI/obj/Debug/net8.0/MoviesAPI.sourcelink.json

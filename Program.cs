@@ -1,17 +1,24 @@
 
 using MoviesAPI.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.SpaServices.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddSpaStaticFiles(configuration =>
+{
+    configuration.RootPath = "frontend/build";
+});
 // Ajoutez vos services ici
 builder.Services.AddSingleton<MovieShop>();
 builder.Services.AddHttpClient<TMDbService>(client =>
 {
     client.BaseAddress = new Uri("https://api.themoviedb.org/3/");
 });
-
+var env = builder.Environment;
 var app = builder.Build();
+app.UseStaticFiles();
+app.UseSpaStaticFiles();
 
 // Utilisez l'injection de dépendances pour obtenir une instance de MovieShop
 var movieShop = app.Services.GetRequiredService<MovieShop>();
@@ -75,6 +82,16 @@ app.MapDelete("/movies/delete/{_id}", (Guid _id, [FromServices] MovieShop movieS
         return Results.NotFound($"Movie with ID {_id} not found.");
     }
 });
+/*
+app.UseSpa(spa =>
+{
+    spa.Options.SourcePath = "client-app";
+
+    if (env.IsDevelopment())
+    {
+        spa.UseProxyToSpaDevelopmentServer("http://localhost:3000");
+    }
+});*/
 /*
 app.MapPost("/user/loan/{_id}", (Guid _id, [FromServices] MovieShop movieShop) =>
 {
