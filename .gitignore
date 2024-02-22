@@ -1,3 +1,39 @@
+# Dépendances
 node_modules/
+
+# Fichiers compilés
 bin/
 obj/
+.next/
+
+# Fichiers de build .NET
+**/[Bb]in/
+**/[Oo]bj/
+*.user
+*.suo
+*.userprefs
+debug/
+Release/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+[Testt]est[Rr]esults/
+[Rr]elease*/
+_[Pp]ackages/
+*.mdf
+*.log
+*.slnx.user
+*.cache
+*.dist
+*.nuget
+
+# Fichiers de build Next.js
+.next/
+out/
+
+# Fichiers générés dans backend
+backend/bin/
+backend/obj/

@@ -1,5 +1,0 @@
-{
-  "GetMovies": "/movies",
-  "GetMovie": "/movies/{id}",
-  "GetMovieByTitle": "/movies/name/{title}"
-}
