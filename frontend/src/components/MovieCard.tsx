@@ -4,9 +4,11 @@ import { Movie } from "../types/Movie";
 
 interface MovieCardProps {
   movie: Movie;
+  showDescription: boolean; // Ajoutez cette ligne
 }
 
-const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
+const MovieCard: React.FC<MovieCardProps> = ({ movie, showDescription }) => {
+  // Ajoutez showDescription ici
   console.log(movie);
   return (
     <div
@@ -23,7 +25,8 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
       <p>
         {movie.year} - {movie.director}
       </p>
-      <p>{movie.description}</p>
+      {showDescription && <p>{movie.description}</p>}{" "}
+      {/* Ajoutez cette condition */}
     </div>
   );
 };
