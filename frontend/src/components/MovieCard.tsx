@@ -9,7 +9,7 @@ interface MovieCardProps {
 
 const MovieCard: React.FC<MovieCardProps> = ({ movie, showDescription }) => {
   // Ajoutez showDescription ici
-  console.log(movie);
+
   return (
     <div
       style={{

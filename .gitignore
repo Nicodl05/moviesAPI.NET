@@ -33,7 +33,9 @@ _[Pp]ackages/
 # Fichiers de build Next.js
 .next/
 out/
-
+/frontend/.next/
+/.next/
+/frontend/.next/cache/
 # Fichiers générés dans backend
 backend/bin/
 backend/obj/

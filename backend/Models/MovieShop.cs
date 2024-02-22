@@ -27,8 +27,19 @@ namespace MoviesAPI.Models
 
         public IEnumerable<Movie> GetAllMovies() => movies;
 
-        public Movie? GetMovieById(Guid id) => movies.FirstOrDefault(m => m.Id == id);
+        public Movie? GetMovieByName(string name) => movies?.FirstOrDefault(m => m.Title.Equals(name));
+        public Movie FindMovieWithTitleFromUserInput(string userInput)
+        {
 
-        public IEnumerable<Movie> GetMoviesByName(string name) => movies.Where(m => m.Title.Equals(name));
+            foreach (var movie in movies)
+            {
+                Console.WriteLine(movie.Title);
+                if (movie.Title.ToLower().Contains(userInput.ToLower()))
+                {
+                    return movie;
+                }
+            }
+            return null;
+        }
     }
 }

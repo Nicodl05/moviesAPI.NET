@@ -27,3 +27,73 @@ export const getMovies = async () => {
     throw error;
   }
 };
+export const getMovie = async (name: string) => {
+  const getMovieEndpoint = url + apiConfig.GetMovieByTitle;
+  try {
+    const response = await fetch(getMovieEndpoint, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name }),
+    });
+    const data = await response.json();
+    if (data.error) {
+      throw new Error(data.error);
+    } else {
+      return data;
+    }
+  } catch (error) {
+    throw error;
+  }
+};
+export const addMovie = async (name: string) => {
+  console.log(name);
+  const addMovieEndpoint = url + apiConfig.AddMovie;
+  try {
+    const response = await fetch(addMovieEndpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    if (response.headers.get("content-type")?.includes("application/json")) {
+      const data = await response.json();
+      if (data.error) {
+        throw new Error(data.error);
+      } else {
+        return data;
+      }
+    } else {
+      throw new Error("The response is not a valid JSON");
+    }
+  } catch (error) {
+    throw error;
+  }
+};
+export const deleteMovie = async (name: string) => {
+  const deleteMovieEndpoint = url + apiConfig.DeleteMovie;
+  try {
+    const response = await fetch(deleteMovieEndpoint, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name }),
+    });
+    const data = await response.json();
+    if (data.error) {
+      throw new Error(data.error);
+    } else {
+      return data;
+    }
+  } catch (error) {
+    throw error;
+  }
+};

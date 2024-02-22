@@ -1,5 +1,6 @@
 {
   "GetMovies": "/movies",
-  "GetMovie": "/movies/{id}",
-  "GetMovieByTitle": "/movies/name/{title}"
+  "GetMovieByTitle": "/movies/name/{title}",
+  "AddMovie": "/movies/add",
+  "DeleteMovie": "/movies/delete"
 }
