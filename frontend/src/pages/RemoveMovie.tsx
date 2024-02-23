@@ -3,9 +3,12 @@ import React, { useEffect, useState } from "react";
 import { getMoviesHandler } from "../handlers/movieHandler";
 import MovieCard from "../components/MovieCard";
 import { deleteMovieHandler } from "../handlers/movieHandler";
+import SearchBar from "../components/SearchBar"; // Importez le composant SearchBar
+import { Movie } from "../types/Movie";
 const RemoveMovie = () => {
   const [title, setTitle] = useState("");
-  const [movies, setMovies] = useState([]);
+  const [search, setSearch] = useState(""); // Nouvel état pour la recherche
+  const [movies, setMovies] = useState<Movie[]>([]);
 
   useEffect(() => {
     getMoviesHandler().then((data) => setMovies(data));
@@ -13,19 +16,22 @@ const RemoveMovie = () => {
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
-    console.log("Film à supprimer :", title);
     if (title.length > 0) {
       try {
         deleteMovieHandler(title).then((data) => {
-          console.log(data);
           getMoviesHandler().then((data) => setMovies(data));
-          console.log("Film supprimé :", title);
         });
       } catch (error) {
         console.error(error);
       }
     }
     setTitle(""); // Réinitialise le titre après la soumission
+    setSearch(""); // Réinitialise la recherche après la soumission
+  };
+
+  const handleSelect = (movie: string) => {
+    setTitle(movie);
+    setSearch(movie); // Mettez à jour l'état de recherche avec le titre sélectionné
   };
 
   return (
@@ -33,14 +39,11 @@ const RemoveMovie = () => {
       <div className="removeMovieForm">
         <h1 style={{ textAlign: "center" }}>Remove a movie</h1>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="movieName">Movie: </label>
-          <input
-            type="text"
-            id="movieName"
-            name="movieName"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            required
+          <SearchBar
+            title={search} // Utilisez l'état de recherche pour le titre
+            handleSearch={(e) => setSearch(e.target.value)} // Mettez à jour l'état de recherche lorsque vous tapez
+            moviesResults={movies.map((movie) => movie.title as string)} // Assurez-vous que chaque film a un titre
+            handleSelect={handleSelect}
           />
           <button type="submit">Remove</button>
         </form>

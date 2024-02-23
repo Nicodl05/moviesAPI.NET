@@ -14,12 +14,7 @@ const Home: React.FC = () => {
   useEffect(() => {
     getMoviesHandler().then((data) => setMovies(data));
   }, []);
-  useEffect(() => {
-    var value = "harry potter";
-    research10MoviesBasedOnTitleHandler(value).then((results) => {
-      console.log(results);
-    });
-  }, []);
+
   return (
     <div>
       <div
