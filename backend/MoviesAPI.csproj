@@ -5,6 +5,9 @@
     <OutputType>Exe</OutputType>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
   </PropertyGroup>
 
     <ItemGroup>
@@ -14,6 +17,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0-preview.1.24081.2" />
 
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+
+    <PackageReference Include="Nunit" Version="4.0.1" />
   </ItemGroup>
 
 
