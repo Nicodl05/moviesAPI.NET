@@ -2,5 +2,6 @@
   "GetMovies": "/movies",
   "GetMovieByTitle": "/movies/name/{title}",
   "AddMovie": "/movies/add",
-  "DeleteMovie": "/movies/delete"
+  "DeleteMovie": "/movies/delete",
+  "Research10MoviesBasedOnTitle": "/movies/research/{title}"
 }

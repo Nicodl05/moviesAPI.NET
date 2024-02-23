@@ -1,4 +1,10 @@
-import { getMovies, getMovie, addMovie, deleteMovie } from "../api/moviesAPI";
+import {
+  getMovies,
+  getMovie,
+  addMovie,
+  deleteMovie,
+  research10MoviesBasedOnTitle,
+} from "../api/moviesAPI";
 
 export const getMoviesHandler = async () => {
   try {
@@ -13,6 +19,18 @@ export const getMoviesHandler = async () => {
 export const getMovieHandler = async (title: string) => {
   try {
     const data = await getMovie(title);
+    if (data.error) {
+      throw new Error(data.error);
+    } else {
+      return data;
+    }
+  } catch (error) {
+    throw error;
+  }
+};
+export const research10MoviesBasedOnTitleHandler = async (title: string) => {
+  try {
+    const data = await research10MoviesBasedOnTitle(title);
     if (data.error) {
       throw new Error(data.error);
     } else {

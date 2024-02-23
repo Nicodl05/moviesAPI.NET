@@ -77,6 +77,27 @@ export const addMovie = async (name: string) => {
     throw error;
   }
 };
+
+export const research10MoviesBasedOnTitle = async (title: string) => {
+  const research10MoviesBasedOnTitleEndpoint =
+    url + apiConfig.Research10MoviesBasedOnTitle.replace("{title}", title);
+  try {
+    const response = await fetch(research10MoviesBasedOnTitleEndpoint, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await response.json();
+    if (data.error) {
+      throw new Error(data.error);
+    } else {
+      return data;
+    }
+  } catch (error) {
+    throw error;
+  }
+};
 export const deleteMovie = async (name: string) => {
   const deleteMovieEndpoint = url + apiConfig.DeleteMovie;
   try {

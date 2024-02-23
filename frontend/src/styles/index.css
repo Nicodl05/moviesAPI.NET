@@ -16,6 +16,9 @@ code {
     monospace;
   color: #c9d1d9;
 }
+.search-results li {
+  cursor: pointer;
+}
 
 h1 {
   font-family: Arial, sans-serif;
@@ -185,4 +188,30 @@ button:hover {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
+}
+.search-results {
+  background-color: #24292e; /* Couleur de fond un peu plus claire que celle de GitHub */
+  border: 1px solid #586069; /* Couleur de bordure de GitHub */
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: #ffffff; /* Texte en blanc */
+}
+
+.search-results h2 {
+  margin-bottom: 1rem;
+}
+
+.search-results ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.search-results li {
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+.search-results li:hover {
+  background-color: #444d56; /* Couleur de fond plus foncée lors du survol */
+  color: #eaf0f7; /* Couleur du texte plus claire lors du survol */
 }
