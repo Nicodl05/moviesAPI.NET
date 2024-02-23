@@ -25,7 +25,7 @@ namespace MoviesAPI.Models
             movies.Remove(movie);
         }
 
-        public IEnumerable<Movie> GetAllMovies() => movies;
+        public List<Movie> GetAllMovies() => movies;
 
         public Movie? GetMovieByName(string name) => movies?.FirstOrDefault(m => m.Title.Equals(name));
         public Movie FindMovieWithTitleFromUserInput(string userInput)

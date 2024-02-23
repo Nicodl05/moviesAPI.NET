@@ -1,6 +1,6 @@
 using MoviesAPI;
 using Newtonsoft.Json;
-
+using MoviesAPI.Models;
 
 public class TMDbService
 {
@@ -49,6 +49,40 @@ public class TMDbService
 
         return null;
     }
+    public async Task<List<string>> Research10MoviesByTitleAsync(string title, MovieShop movieShop)
+    {
+        int numberofmovies = 10;
+        List<string> moviesResearch = new List<string>();
+
+        var response = await _httpClient.GetAsync($"search/movie?api_key={_apiKey}&query={Uri.EscapeDataString(title)}"); //recherche de films
+        response.EnsureSuccessStatusCode(); //  exception si pas de success
+        var content = await response.Content.ReadAsStringAsync(); //  le contenu de la réponse
+
+        var searchResult = JsonConvert.DeserializeObject<SearchResult>(content); // on le fout en json et on a le result de notre query
+        for (int i = 0; i < numberofmovies && i < searchResult?.Results.Count; i++)
+        {
+            bool exist = false;
+            foreach (var movie in movieShop.GetAllMovies())
+            {
+                if (movie.Title == searchResult?.Results[i].Title)
+                {
+                    exist = true;
+                }
+
+            }
+            if (!exist)
+            {
+                moviesResearch.Add(searchResult?.Results[i].Title);
+            }
+            else
+            {
+                numberofmovies++;
+            }
+        }
+        return moviesResearch;
+    }
+
+
 
     internal async Task<Movie?> SearchMovieByTitleAsync(string name)
     {

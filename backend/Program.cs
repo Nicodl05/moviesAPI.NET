@@ -35,7 +35,7 @@ var scope = app.Services.CreateScope();
 var tmdbService = scope.ServiceProvider.GetRequiredService<TMDbService>();
 
 // Exemple : Rechercher et ajouter des films spécifiques à MovieShop
-var moviesToAdd = new List<string> { "Narnia", "Harry Potter", "Star Wars", "The Lord of the Rings" }; // Liste des titres de films à rechercher
+var moviesToAdd = new List<string> { "Narnia", "Hunger Games mockingjay", "Harry Potter", "Star Wars", "The Lord of the Rings" }; // Liste des titres de films à rechercher
 foreach (var title in moviesToAdd)
 {
     var movies = await tmdbService.SearchMoviesByTitleAsync(title);
@@ -52,7 +52,19 @@ app.MapGet("/movies/name/{name}", (string name, [FromServices] MovieShop movieSh
     var movie = movieShop.GetMovieByName(name);
     return movie != null ? Results.Ok(movie) : Results.NotFound($"Movie with name '{name}' not found.");
 });
+app.MapGet("/movies/research/{title}", async (string title, [FromServices] TMDbService tmdbService, [FromServices] MovieShop movieShop) =>
+{
+    if (title.Length < 0)
+    {
+        return Results.BadRequest("The title is empty. Please enter a title.");
+    }
+    else
+    {
+        var movies = await tmdbService.Research10MoviesByTitleAsync(title, movieShop);
 
+        return movies != null ? Results.Ok(movies) : Results.NotFound($"Movie with title '{title}' not found.");
+    }
+});
 app.MapPost("/movies/add", async ([FromBody] MovieName movieToAdd, [FromServices] TMDbService tmdbService, [FromServices] MovieShop movieShop) =>
 {
     var movie = await tmdbService.SearchMoviesByTitleAsync(movieToAdd.Name);
