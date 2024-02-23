@@ -1,11 +1,9 @@
-import React from "react";
 import apiConfig from "./apiConfig.json";
 
 const url = "http://localhost:5002";
 
 export const getMovies = async () => {
   const getMoviesEndpoint = url + apiConfig.GetMovies;
-  console.log(getMoviesEndpoint);
   try {
     const response = await fetch(getMoviesEndpoint, {
       method: "GET",
@@ -48,7 +46,6 @@ export const getMovie = async (name: string) => {
   }
 };
 export const addMovie = async (name: string) => {
-  console.log(name);
   const addMovieEndpoint = url + apiConfig.AddMovie;
   try {
     const response = await fetch(addMovieEndpoint, {

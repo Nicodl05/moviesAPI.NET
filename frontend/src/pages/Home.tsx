@@ -1,12 +1,8 @@
 // Home.tsx
-import React, { use } from "react";
+import React from "react";
 import MovieCard from "../components/MovieCard";
-import { movies as movieData } from "../data/movies";
 import { useEffect, useState } from "react";
-import {
-  getMoviesHandler,
-  research10MoviesBasedOnTitleHandler,
-} from "../handlers/movieHandler";
+import { getMoviesHandler } from "../handlers/movieHandler";
 
 const Home: React.FC = () => {
   const [movies, setMovies] = useState([]);

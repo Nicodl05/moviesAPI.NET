@@ -4,12 +4,10 @@ import { Movie } from "../types/Movie";
 
 interface MovieCardProps {
   movie: Movie;
-  showDescription: boolean; // Ajoutez cette ligne
+  showDescription: boolean;
 }
 
 const MovieCard: React.FC<MovieCardProps> = ({ movie, showDescription }) => {
-  // Ajoutez showDescription ici
-
   return (
     <div
       style={{

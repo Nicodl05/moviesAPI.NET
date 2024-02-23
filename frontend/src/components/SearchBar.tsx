@@ -1,6 +1,5 @@
 // SearchBar.tsx
 import React from "react";
-import { Movie } from "../types/Movie";
 
 interface SearchBarProps {
   title: string;

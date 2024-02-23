@@ -35,7 +35,7 @@ const MovieGrid: React.FC<MovieGridProps> = ({
                 width: "100%",
                 marginTop: "auto",
                 height: "30px",
-              }} // Réduisez la hauteur ici
+              }}
             >
               Supprimer
             </button>

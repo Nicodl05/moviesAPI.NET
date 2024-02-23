@@ -22,30 +22,29 @@ builder.Services.AddCors(options =>
 var env = builder.Environment;
 var app = builder.Build();
 app.UseStaticFiles();
-
-
-
 app.UseCors();
 
 // Utilisez l'injection de dépendances pour obtenir une instance de MovieShop
 var movieShop = app.Services.GetRequiredService<MovieShop>();
-
-// Exemple d'utilisation
 var scope = app.Services.CreateScope();
 var tmdbService = scope.ServiceProvider.GetRequiredService<TMDbService>();
 
 // Exemple : Rechercher et ajouter des films spécifiques à MovieShop
-var moviesToAdd = new List<string> { "Narnia", "Hunger Games mockingjay", "Harry Potter", "Star Wars", "The Lord of the Rings" }; // Liste des titres de films à rechercher
+var moviesToAdd = new List<string> { "Gladiator", "Harry Potter Azkaban", "Star Wars", "The Lord of the Rings" }; // Liste des titres de films à rechercher
 foreach (var title in moviesToAdd)
 {
     var movies = await tmdbService.SearchMoviesByTitleAsync(title);
     movieShop.AddMovie(movies);
 }
 
+var user =
+   new User("Nicolas", "password", "nicolas.dreyfus@outlook.fr", true);
+
+
+//Routes
 app.MapGet("/", () => "Hello World!");
 
 app.MapGet("/movies", () => movieShop.GetAllMovies());
-
 
 app.MapGet("/movies/name/{name}", (string name, [FromServices] MovieShop movieShop) =>
 {
@@ -99,4 +98,12 @@ app.MapDelete("/movies/delete", async ([FromBody] MovieName movieToDelete, [From
         return Results.NotFound($"Movie with title: {movieToDelete.Name} not found in the TMDb.");
     }
 });
+
+app.MapPost("/users/add", (User userToAdd) =>
+{
+    var user = new User(userToAdd.Name, userToAdd.Password, userToAdd.Email);
+    return Results.Created($"/users/{user.Name}", user);
+});
+
+
 app.Run();

@@ -42,7 +42,6 @@ export const research10MoviesBasedOnTitleHandler = async (title: string) => {
 };
 export const addMovieHandler = async (title: string) => {
   try {
-    console.log(title);
     const data = await addMovie(title);
     if (data.error) {
       throw new Error(data.error);

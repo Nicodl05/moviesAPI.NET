@@ -3,11 +3,11 @@ import React, { useEffect, useState } from "react";
 import { getMoviesHandler } from "../handlers/movieHandler";
 import MovieCard from "../components/MovieCard";
 import { deleteMovieHandler } from "../handlers/movieHandler";
-import SearchBar from "../components/SearchBar"; // Importez le composant SearchBar
+import SearchBar from "../components/SearchBar";
 import { Movie } from "../types/Movie";
 const RemoveMovie = () => {
   const [title, setTitle] = useState("");
-  const [search, setSearch] = useState(""); // Nouvel état pour la recherche
+  const [search, setSearch] = useState("");
   const [movies, setMovies] = useState<Movie[]>([]);
 
   useEffect(() => {
@@ -25,13 +25,13 @@ const RemoveMovie = () => {
         console.error(error);
       }
     }
-    setTitle(""); // Réinitialise le titre après la soumission
-    setSearch(""); // Réinitialise la recherche après la soumission
+    setTitle("");
+    setSearch("");
   };
 
   const handleSelect = (movie: string) => {
     setTitle(movie);
-    setSearch(movie); // Mettez à jour l'état de recherche avec le titre sélectionné
+    setSearch(movie);
   };
 
   return (

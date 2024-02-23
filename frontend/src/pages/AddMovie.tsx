@@ -41,7 +41,7 @@ const AddMovie = () => {
         console.error(error);
       }
     }
-    setTitle(""); // Réinitialise le titre après la soumission
+    setTitle("");
   };
 
   const handleSelect = (movie: string) => {

@@ -19,6 +19,9 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 
     <PackageReference Include="Nunit" Version="4.0.1" />
+    <Compile Include="Models\*.cs" />
+    <Compile Include="MoviesAPITests\*.cs" />
+    <Compile Include="Program.cs" />
   </ItemGroup>
 
 
