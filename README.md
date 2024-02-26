@@ -25,7 +25,7 @@ Le projet est divisé en deux parties principales :
 Pour démarrer le frontend :
 
 1. Naviguez vers le dossier `frontend/`.
-2. Exécutez `npm start`.
+2. Exécutez `npm run dev`.
 
 Pour démarrer le backend :
 
